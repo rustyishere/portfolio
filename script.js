@@ -221,7 +221,7 @@ p3circle();
 function p3container() {
     gsap.to(".p3container", {
         y: 70,
-        x:0,
+        x: 0,
         scrollTrigger: {
             trigger: ".p3container",
             scroller: "#main",
@@ -316,14 +316,31 @@ Shery.imageMasker("#p4img1" /* Element to target.*/, {
 //     ease: "cubic-bezier(0.23, 1, 0.320, 1)",
 //     duration: 1,
 // });
-Shery.imageEffect(".img", {
-    style: 6,
-    debug: true,
+Shery.hoverWithMediaCircle(".boxes", {
+    images: ["https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-Image-File.png", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxVdPlO8PEcKnWKhSKhFdPeuItDYgQ9xKIsQ&usqp=CAU","https://www.pngitem.com/pimgs/m/300-3005606_skills-clipart-png-transparent-png.png","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNGDoc77aGK0C-pOz1nSCufIKvPES0hMtSOA&usqp=CAU"] /*OR*/,
+    //videos: ["video1.mp4", "video2.mp4"],
 });
 
+function multicolor() {
+    var elem = document.querySelector(".box2 h1 span");
+    var body = document.querySelector("body");
 
+    var aestheticColors = ["#3498db", "#e74c3c", "#2ecc71", "#f39c12"]; // Aesthetic colors
 
+    var colorIndex = 0;
 
+    body.addEventListener("mousemove", () => {
+        gsap.to(elem, {
+            backgroundColor: aestheticColors[colorIndex],
+            duration: 0.5,
+            ease: "power1.inOut"
+        });
 
+        colorIndex = (colorIndex + 1) % aestheticColors.length; // Cycle through colors
+    });
+}
 
+window.addEventListener('load', () => {
+    multicolor();
+});
 
