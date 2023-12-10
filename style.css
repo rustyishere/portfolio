@@ -1,4 +1,8 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Sanchez&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Holtwood+One+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crushed&display=swap');
+*{
     margin: 0;
     padding: 0;
     color: #fff;
@@ -29,6 +33,7 @@ html {
     width: 100%;
     overflow-x: hidden;
     height: 100%;
+    background-color: var(--pages-color);
 }
 
 #main {
@@ -58,6 +63,7 @@ html {
 }
 
 .nav h2 {
+    font-family: 'Rubik Moonrocks', sans-serif;
     transition: all ease-in-out 0.8s;
     font-size: 13vh;
     color: #fff;
@@ -86,13 +92,20 @@ html {
     text-align: center;
     padding-top: 20vh;
 }
-
 .box2 h1 {
     color: var(--color-black);
+    margin-bottom: 2vh;
+    font-family: 'Holtwood One SC', serif;
 }
+.box2 h1 span{
+    margin-bottom: 2vh;
+    font-family: 'Holtwood One SC', serif;
+}
+
 
 .box2 p {
     color: var(--color-black);
+    font-family: 'Sanchez', serif;
 }
 
 .box img {
@@ -167,6 +180,9 @@ html {
     color: #fff;
 }
 
+.boxes h2{
+    font-family: 'Sanchez', serif;
+}
 /* .mouse {
     background-color: #fff;
     height: 4vh;
@@ -207,6 +223,8 @@ html {
     text-align: center;
     color: #000;
     margin-right: 3vw;
+    font-family: 'Crushed', sans-serif;
+    font-size: large;
 }
 
 .p3circle {
@@ -251,6 +269,8 @@ html {
     text-align: center;
     color: #000;
     margin-top: 15vh;
+    font-family: 'Crushed', sans-serif;
+    font-size: large;
 }
 
 .p4circle {
@@ -294,12 +314,11 @@ html {
 .page6 {
     height: 40vh;
     width: 100%;
-    background-color: var(--color-black);
+    background-color: var(--pages-color);
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    background-color: var(--color-black);
 }
 
 .swiper {
@@ -311,7 +330,7 @@ html {
 .swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: var(--color-black);
+    background: var(--pages-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -587,3 +606,9 @@ html {
         text-align: center;
     }
 }
+
+
+::selection {
+    color: white;
+    background: black;
+  }
